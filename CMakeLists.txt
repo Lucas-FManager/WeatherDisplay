@@ -23,6 +23,11 @@ target_compile_definitions(weather_display PRIVATE I2C_REAL)
 # NeoPixel: real Linux SPI backend.
 target_compile_definitions(weather_display PRIVATE NEOPIXEL_REAL)
 
+# Silence GCC's ABI-change notes from nlohmann/json template instantiations.
+# These are informational only (GCC 7.1 ABI change, 2017) and don't affect
+# correctness, but they bury real warnings under hundreds of noise lines.
+target_compile_options(weather_display PRIVATE -Wno-psabi)
+
 target_link_libraries(weather_display wiringPi curl)
 
 install(TARGETS weather_display RUNTIME DESTINATION /usr/local/bin)
