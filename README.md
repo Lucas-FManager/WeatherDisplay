@@ -110,17 +110,17 @@ Two layers, in order of precedence:
 
 1. **Environment variables** (highest priority). Copy `.env.example` to `.env`, fill in your local values, then load it from systemd in the project root or set variables manually in the shell:
 
-   | Variable             | Purpose                              |
-   |----------------------|--------------------------------------|
-   | `WEATHER_API_KEY`    | weatherapi.com API key (required)    |
-   | `WEATHER_LOCATION`   | City for weather lookup              |
-   | `UNITS`              | `F` or `C` (default `F`)             |
-   | `UPDATE_INTERVAL`    | Seconds between weather fetches      |
-   | `OLED_FORMAT`        | OLED time format string              |
-   | `OLED_SCALE`         | OLED text scale (`auto` or `1`-`4`)  |
-   | `GMAIL_USER`         | Sender Gmail address for alerts      |
-   | `GMAIL_APP_PASSWORD` | Gmail app password for SMTP alerts   |
-   | `ALERT_RECIPIENT`    | Destination email for alerts         |
+   | Variable             | Purpose                                                                |
+   |----------------------|------------------------------------------------------------------------|
+   | `WEATHER_API_KEY`    | weatherapi.com API key (required)                                      |
+   | `WEATHER_LOCATION`   | City for weather lookup                                                |
+   | `UNITS`              | `F` or `C` (default `F`)                                               |
+   | `UPDATE_INTERVAL`    | Seconds between weather fetches                                        |
+   | `OLED_FORMAT`        | OLED time format string - II=hours, MM=minutes, SS=seconds, AP=am/pm   |
+   | `OLED_SCALE`         | OLED text scale (`auto` or `1`-`4`)                                    |
+   | `GMAIL_USER`         | Sender Gmail address for alerts                                        |
+   | `GMAIL_APP_PASSWORD` | Gmail app password for SMTP alerts                                     |
+   | `ALERT_RECIPIENT`    | Destination email for alerts                                           |
 
 2. **`config.json`** in the project root:
 
